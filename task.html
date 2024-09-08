@@ -3,254 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="task.css">
     <title>Cargo Service Form</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .form-section {
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .header {
-            background-color: #007bff;
-            color: white;
-            padding: 8px;
-            border-radius: 5px 5px 0 0;
-        }
-    </style>
-</head>
+    </head>
 <body>
 
 <div class="container mt-5">
-    <h2 class="text-center">Cargo Service Form</h2>
-    <form>
-
-        <div class="form-group">
-            <label>Select Type:</label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="cdType" id="manual_cd" value="manual" checked>
-                <label class="form-check-label" for="manual_cd">Manual_CD</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="cdType" id="auto_cd" value="auto">
-                <label class="form-check-label" for="auto_cd">Auto_CD</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 form-section">
-                <div class="header">Cargo Details</div>
-                <div class="form-group">
-                    <label for="cd_no">CD No / AWB No *</label>
-                    <input type="text" class="form-control" id="cd_no" required>
-                </div>
-                <div class="form-group">
-                    <label for="billing_client">Billing Client *</label>
-                    <input type="text" class="form-control" id="billing_client" required>
-                </div>
-                <div class="form-group">
-                    <label for="origin">Origin *</label>
-                    <input type="text" class="form-control" id="origin" required>
-                </div>
-                <div class="form-group">
-                    <label for="dest_loc">Destination Location *</label>
-                    <input type="text" class="form-control" id="dest_loc" required>
-                </div>
-                <div class="form-group">
-                    <label for="service_type">Service Type *</label>
-                    <select class="form-control" id="service_type" required>
-                        <option value="" disabled selected>Select Service Type</option>
-                        <option value="type1">Type 1</option>
-                        <option value="type2">Type 2</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="forwarder">Forwarder *</label>
-                    <input type="text" class="form-control" id="forwarder" required>
-                </div>
-                <div class="form-group">
-                    <label for="connection_no">Connection No / Doc No *</label>
-                    <input type="text" class="form-control" id="connection_no" required>
-                </div>
-                <div class="form-group">
-                    <label for="booking_date">Booking Date *</label>
-                    <input type="datetime-local" class="form-control" id="booking_date" required>
-                </div>
-                <div class="form-group">
-                    <label for="received_date">Received Date *</label>
-                    <input type="date" class="form-control" id="received_date" required>
-                </div>
-                <div class="form-group">
-                    <label for="mf_no">MF No</label>
-                    <input type="text" class="form-control" id="mf_no">
-                </div>
-                <div class="form-group">
-                    <label for="tot_pcs">Total Pcs</label>
-                    <input type="number" class="form-control" id="tot_pcs">
-                </div>
-                <div class="form-group">
-                    <label for="actual_wgt">Actual Weight</label>
-                    <input type="number" class="form-control" id="actual_wgt">
-                </div>
-                <div class="form-group">
-                    <label for="volumetric_wgt">Volumetric Weight (kg)</label>
-                    <input type="number" class="form-control" id="volumetric_wgt">
-                </div>
-                <div class="form-group">
-                    <label for="desc_of_goods">Description of Goods</label>
-                    <input type="text" class="form-control" id="desc_of_goods">
-                </div>
-                <div class="form-group">
-                    <label for="remarks">Remarks</label>
-                    <textarea class="form-control" id="remarks"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="forward_to">Forward To</label>
-                    <input type="text" class="form-control" id="forward_to">
-                </div>
-                <button type="button" class="btn btn-primary">Add Volumetric Wt</button>
-            </div>
-
-            <div class="col-md-4 form-section">
-                <div class="header">Consignor Details</div>
-                <div class="form-group">
-                    <label for="consignor_name">Consignor Name *</label>
-                    <input type="text" class="form-control" id="consignor_name" required>
-                </div>
-                <div class="form-group">
-                    <label for="consignor_city">City *</label>
-                    <input type="text" class="form-control" id="consignor_city" required>
-                </div>
-                <div class="form-group">
-                    <label for="consignor_address">Address</label>
-                    <input type="text" class="form-control" id="consignor_address">
-                </div>
-                <div class="form-group">
-                    <label for="consignor_mobile">Mobile No</label>
-                    <input type="text" class="form-control" id="consignor_mobile">
-                </div>
-                <div class="form-group">
-                    <label for="consignor_pincode">Pincode</label>
-                    <input type="text" class="form-control" id="consignor_pincode">
-                </div>
-                <div class="form-group">
-                    <label for="consignor_state">State</label>
-                    <input type="text" class="form-control" id="consignor_state">
-                </div>
-                <div class="form-group">
-                    <label for="payment_mode">Payment Mode</label>
-                    <select class="form-control" id="payment_mode">
-                        <option value="credit">CREDIT</option>
-                        <option value="debit">DEBIT</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="rate_per_kg">Rate Per kg</label>
-                    <input type="number" class="form-control" id="rate_per_kg">
-                </div>
-                <div class="form-group">
-                    <label for="chargeable_wt">Chargeable Wt (kg)</label>
-                    <input type="number" class="form-control" id="chargeable_wt">
-                </div>
-                <div class="form-group">
-                    <label for="freight_amt">Freight Amount</label>
-                    <input type="number" class="form-control" id="freight_amt">
-                </div>
-                <div class="form-group">
-                    <label for="fsc_amt">FSC Amount</label>
-                    <input type="number" class="form-control" id="fsc_amt">
-                </div>
-                <div class="form-group">
-                    <label for="total_amt">Total Amount</label>
-                    <input type="number" class="form-control" id="total_amt">
-                </div>
-                <div class="form-group">
-                    <label for="cgst">CGST</label>
-                    <input type="number" class="form-control" id="cgst">
-                </div>
-                <div class="form-group">
-                    <label for="sgst">SGST</label>
-                    <input type="number" class="form-control" id="sgst">
-                </div>
-                <div class="form-group">
-                    <label for="net">Net TotalAmt</label>
-                    <input type="number" class="form-control" id="net" ></div>
-                </div>
-                <div>
-                <button type="button" class="btn btn-primary">Add Invoice Details</button>
-                <button type="button" class="btn btn-primary">Add Charge</button>
-                </div>
-            </div>
-
-            <div class="col-md-4 form-section">
-                <div class="header">Consignee Details</div>
-                <div class="form-group">
-                    <label for="consignee_name">Consignee Name</label>
-                    <input type="text" class="form-control" id="consignee_name">
-                </div>
-                <div class="form-group">
-                    <label for="consignee_city">City *</label>
-                    <input type="text" class="form-control" id="consignee_city" required>
-                </div>
-                <div class="form-group">
-                    <label for="consignee_address">Address</label>
-                    <input type="text" class="form-control" id="consignee_address">
-                </div>
-                <div class="form-group">
-                    <label for="consignee_mobile">Mobile No</label>
-                    <input type="text" class="form-control" id="consignee_mobile">
-                </div>
-                <div class="form-group">
-                    <label for="consignee_pincode">Pincode</label>
-                    <input type="text" class="form-control" id="consignee_pincode">
-                </div>
-                <div class="form-group">
-                    <label for="consignee_state">State</label>
-                    <input type="text" class="form-control" id="consignee_state">
-                </div>
-                <div class="form-group">
-                    <label for="company_name">Company Name</label>
-                    <input type="text" class="form-control" id="company_name" value="MULTI MODEL CARGO SERVICE" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="doc_type">Document Type</label>
-                    <input type="text" class="form-control" id="doc_type" value="NON DOC" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="delivery_type">Delivery Type</label>
-                    <select class="form-control" id="delivery_type">
-                        <option value="door_delivery">Door Delivery</option>
-                        <option value="pickup">Pickup</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="billing_branch">Billing Branch</label>
-                    <input type="text" class="form-control" id="billing_branch" value="CHENNAI" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="invoice_currency">Invoice Currency</label>
-                    <input type="text" class="form-control" id="invoice_currency" value="INR" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="booked_by">Booked By</label>
-                    <input type="text" class="form-control" id="booked_by" value="chenna@mmcs" readonly>
-                </div>
+                <form>
+                    <div class="form-group">
+                        <label>Select Type:</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cdType" id="manual_cd" value="manual" checked>
+                            <label class="form-check-label" for="manual_cd">Manual_CD</label>
+                        </div>
+                    <div class="form-group">
+                        <label for="cdNo">CD No / AWB No *</label>
+                        <input type="text" class="form-control" id="cdNo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="billingClient">Billing Client *</label>
+                        <input type="number" class="form-control" id="billingClient">
+                    </div>
+                    <div class="form-group">
+                        <label for="origin">Origin *</label>
+                        <input type="number" class="form-control" id="origin">
+                    </div>
+                    <div class="form-group">
+                        <label for="destLoc">DestLoc *</label>
+                        <input type="number" class="form-control" id="destLoc">
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceType">Service Type *</label>
+                        <select class="form-control" id="serviceType" required>
+                            <option value="">Select</option>
+                            <option value="standard">Standard</option>
+                            <option value="express">Express</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="forwarder">Forwarder *</label>
+                        <input type="number" class="form-control" id="forwarder">
+                    </div>
+                    <div class="form-group">
+                        <label for="connectionDoc">Connection No / Doc No *</label>
+                        <input type="text" class="form-control" id="connectionDoc" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingDate">Booking Date *</label>
+                        <input type="datetime" class="form-control" id="bookingDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="receivedDate">Received Date *</label>
+                        <input type="date" class="form-control" id="receivedDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mfNo">MF No</label>
+                        <input type="text" class="form-control" id="mfNo">
+                    </div>
+                    <div class="form-group">
+                        <label for="totalpcs">Tot Pcs</label>
+                        <input type="text" class="form-control" id="totalpcs">
+                    </div>
+                    <div class="form-group">
+                        <label for="actualwgt">Actual Wgt</label>
+                        <input type="text" class="form-control" id="actualwgt">
+                    </div>
+                    <div class="form-group">
+                        <label for="volmetric_wgt">Volumetric_Wgt(kg)</label>
+                        <input type="text" class="form-control" id="volmetric_wgt">
+                    </div>
+                    <div class="form-group">
+                        <label for="desc_of_goods">Desc_of_goods</label>
+                        <input type="text" class="form-control" id="desc_of_goods">
+                    </div>
+                    <div class="form-group">
+                        <label for="forwardto">Forward To</label>
+                        <input type="number" class="form-control"  id="forwardto">
+                    </div>
+                    <button type="button" class="btn btn-primary">Add Volumetric Wt</button>
+                </form>
             </div>
         </div>
 
-        <div class="text-center">
-            <button type="submit" class="btn btn-success">Save</button>
-            <button type="button" class="btn btn-warning">Update</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-            <button type="button" class="btn btn-secondary">Clear</button>
-            <button type="button" class="btn btn-info">Print</button>
+        <div class="col-md-4">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="edd">EDD</label>
+                    <input type="date" class="form-control" id="edd">
+                </div>
+                <div class="form-header">CONSIGNOR DETAILS</div>
+                <form>
+                    <div class="form-group">
+                        <label for="search">SEARCH</label>
+                        <input type="number" class="form-control" id="search">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorName">Consignor Name *</label>
+                        <input type="text" class="form-control" id="consignorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorCity">City *</label>
+                        <input type="text" class="form-control" id="consignorCity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorAddress">Address</label>
+                        <input type="text" class="form-control" id="consignorAddress">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorMobile">Mobile No</label>
+                        <input type="tel" class="form-control" id="consignorMobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorPincode">Pincode</label>
+                        <input type="text" class="form-control" id="consignorPincode">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorState">State</label>
+                        <input type="text" class="form-control" id="consignorState">
+                    </div>
+                    <div class="form-header">Billing Details</div>
+                    <div class="form-group">
+                        <label for="paymentMode">Payment Mode</label>
+                        <select class="form-control" id="paymentMode">
+                            <option value="CREDIT">CREDIT</option>
+                            <option value="DEBIT">DEBIT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ratePerKg">Rate Per Kg</label>
+                        <input type="number" class="form-control" id="ratePerKg">
+                    </div>
+                    <div class="form-group">
+                        <label for="totalAmt">Total Amount</label>
+                        <input type="number" class="form-control" id="totalAmt">
+                    </div>
+                    <button type="button" class="btn btn-primary">Add Invoice Details</button>
+                    <button type="button" class="btn btn-primary">Add Charge</button>
+                </form>
+            </div>
         </div>
-    </form>
+
+        <div class="col-md-4">
+            <div class="form-section">
+                <div class="form-header">CONSIGNEE DETAILS</div>
+                <form>
+                    <div class="form-group">
+                        <label for="search">SEARCH</label>
+                        <input type="number" class="form-control" id="search">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeName">Consignee Name</label>
+                        <input type="text" class="form-control" id="consigneeName">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeCity">City *</label>
+                        <input type="text" class="form-control" id="consigneeCity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeAddress">Address</label>
+                        <input type="text" class="form-control" id="consigneeAddress">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeMobile">Mobile No</label>
+                        <input type="tel" class="form-control" id="consigneeMobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneePincode">Pincode</label>
+                        <input type="text" class="form-control" id="consigneePincode">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeState">State</label>
+                        <input type="text" class="form-control" id="consigneeState">
+                    </div>
+                    <!--<div class="form-header">Company Details</div>-->
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" value="MULTI MODEL CARGO SERVICE" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="docType">Doc Type</label>
+                        <input type="text" class="form-control" id="docType" value="NON DOC" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryType">Delivery Type</label>
+                        <input type="text" class="form-control" id="deliveryType" value="Door delivery" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="freightcharge">Freight Charge By</label>
+                        <input type="text" class="form-control" id="freightcharge" value="CONSIGNATION" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="invoice_currency">Invoice_Currency</label>
+                        <input type="text" class="form-control" id="invoice_currency" value="INR" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="booked by">Booked By</label>
+                        <input type="text" class="form-control" id="booked by" value="chennai@mmcs">
+                    </div>
+                  
+                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-primary">Delete</button>
+                    <button type="button" class="btn btn-primary">Clear</button>
+                    <button type="button" class="btn btn-primary">Print</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
