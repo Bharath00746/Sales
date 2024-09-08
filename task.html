@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="task.css">
+    <link rel="stylesheet" href="./task.css">
     <title>Cargo Service Form</title>
+
+    
     </head>
 <body>
 
-<div class="container mt-5">
-                <form>
+<div class="container d-flex flex-row align-items-center justify-content-evenly border mt-5">
+
+                <form class="col-md-3" >
+
                     <div class="form-group">
                         <label>Select Type:</label>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="cdType" id="manual_cd" value="manual" checked>
                             <label class="form-check-label" for="manual_cd">Manual_CD</label>
                         </div>
+                    </div>
                     <div class="form-group">
-                        <label for="cdNo">CD No / AWB No *</label>
+                        <label for="cdNo">CD No / AWB No <span class="star" >*</span></label>
                         <input type="text" class="form-control" id="cdNo" required>
                     </div>
                     <div class="form-group">
-                        <label for="billingClient">Billing Client *</label>
+                        <label for="billingClient">Billing Client <span class="star" >*</span></label>
                         <input type="number" class="form-control" id="billingClient">
                     </div>
                     <div class="form-group">
-                        <label for="origin">Origin *</label>
+                        <label for="origin">Origin <span class="star" >*</span></label>
                         <input type="number" class="form-control" id="origin">
                     </div>
                     <div class="form-group">
-                        <label for="destLoc">DestLoc *</label>
+                        <label for="destLoc">DestLoc <span class="star" >*</span></label>
                         <input type="number" class="form-control" id="destLoc">
                     </div>
                     <div class="form-group">
-                        <label for="serviceType">Service Type *</label>
+                        <label for="serviceType">Service Type <span class="star" >*</span></label>
                         <select class="form-control" id="serviceType" required>
                             <option value="">Select</option>
                             <option value="standard">Standard</option>
@@ -42,19 +47,19 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="forwarder">Forwarder *</label>
+                        <label for="forwarder">Forwarder <span class="star" >*</span></label>
                         <input type="number" class="form-control" id="forwarder">
                     </div>
                     <div class="form-group">
-                        <label for="connectionDoc">Connection No / Doc No *</label>
+                        <label for="connectionDoc">Connection No / Doc No <span class="star" >*</span></label>
                         <input type="text" class="form-control" id="connectionDoc" required>
                     </div>
                     <div class="form-group">
-                        <label for="bookingDate">Booking Date *</label>
+                        <label for="bookingDate">Booking Date <span class="star" >*</span></label>
                         <input type="datetime" class="form-control" id="bookingDate" required>
                     </div>
                     <div class="form-group">
-                        <label for="receivedDate">Received Date *</label>
+                        <label for="receivedDate">Received Date <span class="star" >*</span></label>
                         <input type="date" class="form-control" id="receivedDate" required>
                     </div>
                     <div class="form-group">
@@ -84,7 +89,7 @@
                     <button type="button" class="btn btn-primary">Add Volumetric Wt</button>
                 </form>
             </div>
-        </div>
+        
 
         <div class="col-md-4">
             <div class="form-section">
@@ -99,11 +104,11 @@
                         <input type="number" class="form-control" id="search">
                     </div>
                     <div class="form-group">
-                        <label for="consignorName">Consignor Name *</label>
+                        <label for="consignorName">Consignor Name <span class="star" >*</span></label>
                         <input type="text" class="form-control" id="consignorName" required>
                     </div>
                     <div class="form-group">
-                        <label for="consignorCity">City *</label>
+                        <label for="consignorCity">City <span class="star" >*</span></label>
                         <input type="text" class="form-control" id="consignorCity" required>
                     </div>
                     <div class="form-group">
@@ -158,7 +163,7 @@
                         <input type="text" class="form-control" id="consigneeName">
                     </div>
                     <div class="form-group">
-                        <label for="consigneeCity">City *</label>
+                        <label for="consigneeCity">City <span class="star" >*</span></label>
                         <input type="text" class="form-control" id="consigneeCity" required>
                     </div>
                     <div class="form-group">

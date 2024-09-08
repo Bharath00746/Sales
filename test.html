@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Cargo Service Form</title>
+    <style>
+        .form-header{
+    background-color: #00008b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#Billing Details{
+    color: red;
+}
+
+#booked by{
+    color: green;
+}
+
+
+input.form-control{
+    border: 1px solid lightblue;
+}
+
+.btn{
+    margin: 5px;
+}
+
+        .star{
+            color: red !important;
+        }
+    </style>
+    </head>
+<body>
+
+    <div class=" container-fluid d-flex bg-info-subtle flex-md-row flex-column align-items-start border border-danger pt-5 justify-content-between">
+
+        <div class="col-md-4 col-12 bg-white">
+            <form class="col-md-12" >
+
+                <div class="form-group  d-flex align-items-center justify-content-between">
+                    <label>Select Type:</label>
+                    <div class="form-check form-check-inline col-8 d-flex align-items-center justify-content-between">
+                        <input class="form-check-input" type="radio" name="cdType" id="manual_cd" value="manual" checked>
+                        <label class="form-check-label" for="manual_cd">Manual_CD</label>
+
+                        <input class="form-check-input " type="radio" name="cdType" id="auto_cd" value="auto" checked>
+                        <label class="form-check-label " for="auto_cd">AUTO_CD</label>
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <label for="cdNo">CD No / AWB No <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="text" class="form-control" id="cdNo" required>
+                </div>
+                <div class="form-group">
+                    <label for="billingClient">Billing Client <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="number" class="form-control" id="billingClient">
+                </div>
+                <div class="form-group">
+                    <label for="origin">Origin <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="number" class="form-control" id="origin">
+                </div>
+                <div class="form-group">
+                    <label for="destLoc">DestLoc <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="number" class="form-control" id="destLoc">
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Service Type <span class="star" ><span class="star" >*</span></span></label>
+                    <select class="form-control" id="serviceType" required>
+                        <option value="">Select</option>
+                        <option value="standard">Standard</option>
+                        <option value="express">Express</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="forwarder">Forwarder <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="number" class="form-control" id="forwarder">
+                </div>
+                <div class="form-group">
+                    <label for="connectionDoc">Connection No / Doc No <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="text" class="form-control" id="connectionDoc" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingDate">Booking Date <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="datetime" class="form-control" id="bookingDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="receivedDate">Received Date <span class="star" ><span class="star" >*</span></span></label>
+                    <input type="date" class="form-control" id="receivedDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="mfNo">MF No</label>
+                    <input type="text" class="form-control" id="mfNo">
+                </div>
+                <div class="form-group">
+                    <label for="totalpcs">Tot Pcs</label>
+                    <input type="text" class="form-control" id="totalpcs">
+                </div>
+                <div class="form-group">
+                    <label for="actualwgt">Actual Wgt</label>
+                    <input type="text" class="form-control" id="actualwgt">
+                </div>
+                <div class="form-group">
+                    <label for="volmetric_wgt">Volumetric_Wgt(kg)</label>
+                    <input type="text" class="form-control" id="volmetric_wgt">
+                </div>
+                <div class="form-group">
+                    <label for="desc_of_goods">Desc_of_goods</label>
+                    <input type="text" class="form-control" id="desc_of_goods">
+                </div>
+                <div class="form-group">
+                    <label for="forwardto">Forward To</label>
+                    <input type="number" class="form-control"  id="forwardto">
+                </div>
+                <button type="button" class="btn btn-primary">Add Volumetric Wt</button>
+            </form>
+        </div>
+
+        <div class="col-md-4 col-12 h-100">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="edd">EDD</label>
+                    <input type="date" class="form-control" id="edd">
+                </div>
+                <div class="form-header">CONSIGNOR DETAILS</div>
+                <form>
+                    <div class="form-group">
+                        <label for="search">SEARCH</label>
+                        <input type="number" class="form-control" id="search">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorName">Consignor Name <span class="star" ><span class="star" >*</span></span></label>
+                        <input type="text" class="form-control" id="consignorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorCity">City <span class="star" ><span class="star" >*</span></span></label>
+                        <input type="text" class="form-control" id="consignorCity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorAddress">Address</label>
+                        <input type="text" class="form-control" id="consignorAddress">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorMobile">Mobile No</label>
+                        <input type="tel" class="form-control" id="consignorMobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorPincode">Pincode</label>
+                        <input type="text" class="form-control" id="consignorPincode">
+                    </div>
+                    <div class="form-group">
+                        <label for="consignorState">State</label>
+                        <input type="text" class="form-control" id="consignorState">
+                    </div>
+                    <div class="form-header bg-white text-danger">Billing Details</div>
+                    <div class="form-group">
+                        <label for="paymentMode">Payment Mode</label>
+                        <select class="form-control" id="paymentMode">
+                            <option value="CREDIT">CREDIT</option>
+                            <option value="DEBIT">DEBIT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="chargable">ChargableWt(kg)</label>
+                        <input type="number" class="form-control" id="chargable">
+                    </div>
+                    <div class="form-group">
+                        <label for="ratePerKg">RatePer_Kg</label>
+                        <input type="number" class="form-control" id="ratePerKg">
+                    </div>
+                    <div class="form-group">
+                        <label for="freightamt">FreightAmt</label>
+                        <input type="number" class="form-control" id="freightamt">
+                    </div>
+                    <div class="form-group">
+                        <label for="fsc_amt">FSC_Amt</label>
+                        <input type="number" class="form-control" id="fsc_amt">
+                    </div>
+                    <div class="form-group">
+                        <label for="othercharge">Other Charge</label>
+                        <input type="number" class="form-control" id="othercharge">
+                    </div>
+                    <div class="form-group">
+                        <label for="totalAmt">Total Amount</label>
+                        <input type="number" class="form-control" id="totalAmt">
+                    </div>
+                    <div class="form-group">
+                        <label for="igst">IGST</label>
+                        <input type="number" class="form-control" id="igst">
+                    </div>
+                    <div class="form-group">
+                        <label for="cgst">CGST</label>
+                        <input type="number" class="form-control" id="cgst">
+                    </div>
+                    <div class="form-group"></div>
+                        <label for="sgst">SGST</label>
+                        <input type="number" class="form-control" id="sgst">
+                    </div>
+                    <div class="form-group"></div>
+                        <label for="nettotalamt">Net TotalAmt</label>
+                        <input type="number" class="form-control" id="nettotalamt">
+                       
+                    <button type="button" class="btn btn-primary">Add Invoice Details</button>
+                    <button type="button" class="btn btn-primary">Add Charge</button>
+                    </div>
+                    
+                </form>
+
+                <div class="col-md-4 col-12 vh-100 ">
+                    <div class="form-section">
+                        <div class="form-header">CONSIGNEE DETAILS</div>
+                        <form>
+                            <div class="form-group">
+                                <label for="search">SEARCH</label>
+                                <input type="number" class="form-control" id="search">
+        
+                            </div>
+                            <div class="form-group">
+                                <label for="consigneeName">Consignee Name</label>
+                                <input type="text" class="form-control" id="consigneeName">
+                            </div>
+                            <div class="form-group">
+                                <label for="consigneeCity">City <span class="star" ><span class="star" >*</span></span></label>
+                                <input type="text" class="form-control" id="consigneeCity" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="consigneeAddress">Address</label>
+                                <input type="text" class="form-control" id="consigneeAddress">
+                            </div>
+                            <div class="form-group">
+                                <label for="consigneeMobile">Mobile No</label>
+                                <input type="tel" class="form-control" id="consigneeMobile">
+                            </div>
+                            <div class="form-group">
+                                <label for="consigneePincode">Pincode</label>
+                                <input type="text" class="form-control" id="consigneePincode">
+                            </div>
+                            <div class="form-group">
+                                <label for="consigneeState">State</label>
+                                <input type="text" class="form-control" id="consigneeState">
+                            </div>
+                            <!--<div class="form-header">Company Details</div>-->
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" class="form-control" id="companyName" value="MULTI MODEL CARGO SERVICE" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="docType">Doc Type</label>
+                                <input type="text" class="form-control" id="docType" value="NON DOC" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryType">Delivery Type</label>
+                                <input type="text" class="form-control" id="deliveryType" value="Door delivery" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="freightcharge">Freight Charge By</label>
+                                <input type="text" class="form-control" id="freightcharge" value="CONSIGNATION" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="invoice_currency">Invoice_Currency</label>
+                                <input type="text" class="form-control" id="invoice_currency" value="INR" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="booked by">Booked By</label>
+                                <input type="text" class="form-control text-success" id="booked by" value="chennai@mmcs">
+                            </div>
+                          
+                            <button type="button" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-primary">Update</button>
+                            <button type="button" class="btn btn-primary">Delete</button>
+                            <button type="button" class="btn btn-primary">Clear</button>
+                            <button type="button" class="btn btn-primary">Print</button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        
+
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
