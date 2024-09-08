@@ -1,0 +1,25 @@
+.form-header{
+    background-color: #00008b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#Billing Details{
+    color: red;
+}
+
+#booked by{
+    color: green;
+}
+
+
+input.form-control{
+    border: 1px solid lightblue;
+}
+
+.btn{
+    margin: 5px;
+}
