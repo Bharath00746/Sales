@@ -4,291 +4,349 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
     <title>Cargo Service Form</title>
-    <style>
-        .form-header{
-    background-color: #00008b;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-
-#Billing Details{
-    color: red;
-}
-
-#booked by{
-    color: green;
-}
-
-
-input.form-control{
-    border: 1px solid lightblue;
-}
-
-.btn{
-    margin: 5px;
-}
-
-        .star{
-            color: red !important;
-        }
-    </style>
-    </head>
+</head>
 <body>
 
-    <div class=" container-fluid d-flex bg-info-subtle flex-md-row flex-column align-items-start border border-danger pt-5 justify-content-between">
-
-        <div class="col-md-4 col-12 bg-white">
-            <form class="col-md-12" >
-
-                <div class="form-group  d-flex align-items-center justify-content-between">
-                    <label>Select Type:</label>
-                    <div class="form-check form-check-inline col-8 d-flex align-items-center justify-content-between">
-                        <input class="form-check-input" type="radio" name="cdType" id="manual_cd" value="manual" checked>
+<div class="container">
+    <div class="row">
+       
+        <div class="col-4">
+            <form>
+                <div class="form-group row mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input ml-3" type="radio" name="cdType" id="manual_cd" value="manual">
                         <label class="form-check-label" for="manual_cd">Manual_CD</label>
 
-                        <input class="form-check-input " type="radio" name="cdType" id="auto_cd" value="auto" checked>
-                        <label class="form-check-label " for="auto_cd">AUTO_CD</label>
+                        <input class="form-check-input ml-3" type="radio" name="cdType" id="auto_cd" value="auto">
+                        <label class="form-check-label" for="auto_cd">AUTO_CD</label>
                     </div>
-                </div>  
-                <div class="form-group">
-                    <label for="cdNo">CD No / AWB No <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="text" class="form-control" id="cdNo" required>
                 </div>
-                <div class="form-group">
-                    <label for="billingClient">Billing Client <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="number" class="form-control" id="billingClient">
+
+                <div class="form-group row mb-3">
+                    <label for="cdNo" class="col-sm-5">CD No / AWB No <span class="star">*</span></label>
+                    <input type="text" class="form-control col-sm-7" id="cdNo" required style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="origin">Origin <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="number" class="form-control" id="origin">
+
+                <div class="form-group row mb-3">
+                    <label for="billingClient" class="col-sm-5">Billing Client <span class="star">*</span></label>
+                    <input type="number" class="form-control col-sm-7" id="billingClient" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="destLoc">DestLoc <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="number" class="form-control" id="destLoc">
+
+                <div class="form-group row mb-3">
+                    <label for="origin" class="col-sm-5">Origin <span class="star">*</span></label>
+                    <input type="number" class="form-control col-sm-7" id="origin" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="serviceType">Service Type <span class="star" ><span class="star" >*</span></span></label>
-                    <select class="form-control" id="serviceType" required>
+
+                <div class="form-group row mb-3">
+                    <label for="destLoc" class="col-sm-5">DestLoc <span class="star">*</span></label>
+                    <input type="number" class="form-control col-sm-7" id="destLoc" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="serviceType" class="col-sm-5">Service Type <span class="star">*</span></label>
+                    <select class="form-control col-sm-7" id="serviceType" style="height:25px;">
                         <option value="">Select</option>
                         <option value="standard">Standard</option>
                         <option value="express">Express</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="forwarder">Forwarder <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="number" class="form-control" id="forwarder">
+
+                <div class="form-group row mb-3">
+                    <label for="forwarder" class="col-sm-5">Forwarder</label>
+                    <input type="number" class="form-control col-sm-7" id="forwarder" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="connectionDoc">Connection No / Doc No <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="text" class="form-control" id="connectionDoc" required>
+
+                <div class="form-group  row mb-3">
+                    <label for="connectionDoc" class="col-sm-5">Connection No / Doc No</label>
+                    <input type="text" class="form-control col-sm-7" id="connectionDoc" required style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="bookingDate">Booking Date <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="datetime" class="form-control" id="bookingDate" required>
+
+                <div class="form-group row mb-3">
+                    <label for="bookingdate" class="col-sm-5">Booking Date <span class="star">*</span></label>
+                    <input type="datetime-local" class="form-control col-sm-7" id="bookingdate" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="receivedDate">Received Date <span class="star" ><span class="star" >*</span></span></label>
-                    <input type="date" class="form-control" id="receivedDate" required>
+
+                <div class="form-group row mb-3">
+                    <label for="receiveddate" class="col-sm-5">Received Date</label>
+                    <input type="date" class="form-control col-sm-7" id="receiveddate" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="mfNo">MF No</label>
-                    <input type="text" class="form-control" id="mfNo">
+
+                
+                    <div class="form-group row mb-3">
+                    <label for="mfno" class="col-sm-5">MF NO</label>
+                    <input type="number" class="form-control col-sm-7" id="mfno" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="totalpcs">Tot Pcs</label>
-                    <input type="text" class="form-control" id="totalpcs">
+                <div class="row mt-5" >
+                    <div class="col-6">
+                <div class="form-group row mb-3">
+                    <label for="totalpcs" class="col-sm-5">Tot Pcs<span class="star">*</span></label>
+                    <input type="text" class="form-control col-sm-7" id="totalpcs" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="actualwgt">Actual Wgt</label>
-                    <input type="text" class="form-control" id="actualwgt">
+                <button type="button" class="btn btn-primary mt-3" >Add Volumetric Wt</button>
                 </div>
-                <div class="form-group">
-                    <label for="volmetric_wgt">Volumetric_Wgt(kg)</label>
-                    <input type="text" class="form-control" id="volmetric_wgt">
+                <div class="col-6">
+                <div class="form-group row mb-3">
+                    <label for="actualwgt" class="col-sm-5">Actual Wgt<span class="star">*</span></label>
+                    <input type="text" class="form-control col-sm-7" id="actualwgt" style="height:25px;" >
                 </div>
-                <div class="form-group">
-                    <label for="desc_of_goods">Desc_of_goods</label>
-                    <input type="text" class="form-control" id="desc_of_goods">
+
+                <div class="form-group row mb-3">
+                    <label for="volmetric_wgt" class="col-sm-5">Volumetric Wgt(kg)<span class="star">*</span></label>
+                    <input type="text" class="form-control col-sm-7" id="volmetric_wgt" style="height:25px;">
                 </div>
-                <div class="form-group">
-                    <label for="forwardto">Forward To</label>
-                    <input type="number" class="form-control"  id="forwardto">
+              </div>
+                <div class="form-group row mb-3">
+                    <label for="desc_of_goods" class="col-sm-5">Desc of Goods</label>
+                    <input type="text" class="form-control col-sm-7" id="desc_of_goods" style="height:25px;">
                 </div>
-                <button type="button" class="btn btn-primary">Add Volumetric Wt</button>
+
+                <div class="form-group row mb-3">
+                    <label for="forwardto" class="col-sm-5">Forward To</label>
+                    <input type="number" class="form-control col-sm-7" id="forwardto" style="height:25px;">
+                </div>
+
+               
+                </div>
             </form>
         </div>
-
-        <div class="col-md-4 col-12 h-100">
-            <div class="form-section">
-                <div class="form-group">
-                    <label for="edd">EDD</label>
-                    <input type="date" class="form-control" id="edd">
+        
+        <div class="col-4">
+            <form>
+                <div class="form-group row mb-3">
+                    <label for="edd" class="col-sm-5">EDD</label>
+                    <input type="date" class="form-control col-sm-7" id="edd">
                 </div>
+
                 <div class="form-header">CONSIGNOR DETAILS</div>
-                <form>
-                    <div class="form-group">
-                        <label for="search">SEARCH</label>
-                        <input type="number" class="form-control" id="search">
-                    </div>
-                    <div class="form-group">
-                        <label for="consignorName">Consignor Name <span class="star" ><span class="star" >*</span></span></label>
-                        <input type="text" class="form-control" id="consignorName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="consignorCity">City <span class="star" ><span class="star" >*</span></span></label>
-                        <input type="text" class="form-control" id="consignorCity" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="consignorAddress">Address</label>
-                        <input type="text" class="form-control" id="consignorAddress">
-                    </div>
-                    <div class="form-group">
-                        <label for="consignorMobile">Mobile No</label>
-                        <input type="tel" class="form-control" id="consignorMobile">
-                    </div>
-                    <div class="form-group">
-                        <label for="consignorPincode">Pincode</label>
-                        <input type="text" class="form-control" id="consignorPincode">
-                    </div>
-                    <div class="form-group">
-                        <label for="consignorState">State</label>
-                        <input type="text" class="form-control" id="consignorState">
-                    </div>
-                    <div class="form-header bg-white text-danger">Billing Details</div>
-                    <div class="form-group">
-                        <label for="paymentMode">Payment Mode</label>
-                        <select class="form-control" id="paymentMode">
-                            <option value="CREDIT">CREDIT</option>
-                            <option value="DEBIT">DEBIT</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="chargable">ChargableWt(kg)</label>
-                        <input type="number" class="form-control" id="chargable">
-                    </div>
-                    <div class="form-group">
-                        <label for="ratePerKg">RatePer_Kg</label>
-                        <input type="number" class="form-control" id="ratePerKg">
-                    </div>
-                    <div class="form-group">
-                        <label for="freightamt">FreightAmt</label>
-                        <input type="number" class="form-control" id="freightamt">
-                    </div>
-                    <div class="form-group">
-                        <label for="fsc_amt">FSC_Amt</label>
-                        <input type="number" class="form-control" id="fsc_amt">
-                    </div>
-                    <div class="form-group">
-                        <label for="othercharge">Other Charge</label>
-                        <input type="number" class="form-control" id="othercharge">
-                    </div>
-                    <div class="form-group">
-                        <label for="totalAmt">Total Amount</label>
-                        <input type="number" class="form-control" id="totalAmt">
-                    </div>
-                    <div class="form-group">
-                        <label for="igst">IGST</label>
-                        <input type="number" class="form-control" id="igst">
-                    </div>
-                    <div class="form-group">
-                        <label for="cgst">CGST</label>
-                        <input type="number" class="form-control" id="cgst">
-                    </div>
-                    <div class="form-group"></div>
-                        <label for="sgst">SGST</label>
-                        <input type="number" class="form-control" id="sgst">
-                    </div>
-                    <div class="form-group"></div>
-                        <label for="nettotalamt">Net TotalAmt</label>
-                        <input type="number" class="form-control" id="nettotalamt">
-                       
-                    <button type="button" class="btn btn-primary">Add Invoice Details</button>
-                    <button type="button" class="btn btn-primary">Add Charge</button>
-                    </div>
-                    
-                </form>
 
-                <div class="col-md-4 col-12 vh-100 ">
-                    <div class="form-section">
-                        <div class="form-header">CONSIGNEE DETAILS</div>
-                        <form>
-                            <div class="form-group">
-                                <label for="search">SEARCH</label>
-                                <input type="number" class="form-control" id="search">
-        
-                            </div>
-                            <div class="form-group">
-                                <label for="consigneeName">Consignee Name</label>
-                                <input type="text" class="form-control" id="consigneeName">
-                            </div>
-                            <div class="form-group">
-                                <label for="consigneeCity">City <span class="star" ><span class="star" >*</span></span></label>
-                                <input type="text" class="form-control" id="consigneeCity" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="consigneeAddress">Address</label>
-                                <input type="text" class="form-control" id="consigneeAddress">
-                            </div>
-                            <div class="form-group">
-                                <label for="consigneeMobile">Mobile No</label>
-                                <input type="tel" class="form-control" id="consigneeMobile">
-                            </div>
-                            <div class="form-group">
-                                <label for="consigneePincode">Pincode</label>
-                                <input type="text" class="form-control" id="consigneePincode">
-                            </div>
-                            <div class="form-group">
-                                <label for="consigneeState">State</label>
-                                <input type="text" class="form-control" id="consigneeState">
-                            </div>
-                            <!--<div class="form-header">Company Details</div>-->
-                            <div class="form-group">
-                                <label for="companyName">Company Name</label>
-                                <input type="text" class="form-control" id="companyName" value="MULTI MODEL CARGO SERVICE" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="docType">Doc Type</label>
-                                <input type="text" class="form-control" id="docType" value="NON DOC" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="deliveryType">Delivery Type</label>
-                                <input type="text" class="form-control" id="deliveryType" value="Door delivery" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="freightcharge">Freight Charge By</label>
-                                <input type="text" class="form-control" id="freightcharge" value="CONSIGNATION" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="invoice_currency">Invoice_Currency</label>
-                                <input type="text" class="form-control" id="invoice_currency" value="INR" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="booked by">Booked By</label>
-                                <input type="text" class="form-control text-success" id="booked by" value="chennai@mmcs">
-                            </div>
-                          
-                            <button type="button" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn btn-primary">Update</button>
-                            <button type="button" class="btn btn-primary">Delete</button>
-                            <button type="button" class="btn btn-primary">Clear</button>
-                            <button type="button" class="btn btn-primary">Print</button>
-                        </form>
-                    </div>
-                </div> 
+                <div class="form-group row mb-3">
+                    <label for="searchconsignor" class="col-sm-5">SEARCH</label>
+                    <select type="text" class="form-control col-sm-7" id="searchconsignor" required style="height:25px;">
+                        <option value="abc">ABC</option>
+                        <option value="def">DEF</option>
+                    </select>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="consignorname" class="col-sm-5">Consignor Name<span class="star">*</span></label>
+                    <input type="text" class="form-control col-sm-7" id="consignorname" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="city" class="col-sm-5">City<span class="star">*</span></label>
+                    <input type="text" class="form-control col-sm-7" id="city" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="address" class="col-sm-5">Address</label>
+                    <input type="text" class="form-control col-sm-7" id="address" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="mobileno" class="col-sm-5">Mobile No</label>
+                    <input type="tel" class="form-control col-sm-7" id="mobileno" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="pincode" class="col-sm-5">Pin code</label>
+                    <input type="number" class="form-control col-sm-7" id="pincode" style="height:25px;">
+                </div>
+
+                <div class="form-group  row mb-3">
+                    <label for="state" class="col-sm-5">State</label>
+                    <input type="text" class="form-control col-sm-7" id="state" required style="height:25px;">
+                </div>
+
+                <div class="form-header bg-white text-danger">Billing Details</div>
+                
+                <div class="row mt-5" >
+                    <div class="col-6">
+                <div class="form-group row mb-3">
+                    <label for="paymentMode" class="col-sm-5">Payment Mode<span class="star">*</span></label>
+                    <select type="text" class="form-control col-sm-7" id="totalpcs" style="height:25px;">
+                        <option value="credit">CREDIT</option>
+                        <option value="debit">DEBIT</option>
+                    </select>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="ratePerKg" class="col-sm-5">RatePer_kg</label>
+                    <input type="text" class="form-control col-sm-7" id="ratePerKg" style="height: 25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="fsc_amt" class="col-sm-5">FSC_Amt</label>
+                    <input type="text" class="form-control col-sm-7" id="fsc_amt" style="height:25px;" >
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="totalamt" class="col-sm-5">TotalAmt</label>
+                    <input type="text" class="form-control col-sm-7" id="totalamt" style="height:25px;" >
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="cgst" class="col-sm-5">CGST</label>
+                    <input type="text" class="form-control col-sm-7" id="cgst" style="height:25px;" >
+                </div>
             </div>
-        </div>
 
+                <div class="col-6">
+                <div class="form-group row mb-3">
+                    <label for="chargablewt" class="col-sm-5">ChargableWt(kg)</label>
+                    <input type="text" class="form-control col-sm-7" id="chargablewt" style="height:25px;" >
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="freightamt" class="col-sm-5">FreightAmt</label>
+                    <input type="text" class="form-control col-sm-7" id="freightamt" style="height:25px;">
+                </div>
+
+                <div class="form=group row mb-3">
+                    <label for="othercharge">Other Charge</label>
+                    <input type="text" class="form-control col-sm-7" id="othercharge" style="height: 25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="igst" class="col-sm-5">IGST</label>
+                    <input type="text" class="form-control col-sm-7" id="igst" style="height:25px;" >
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="sgst" class="col-sm-5">SGST</label>
+                    <input type="text" class="form-control col-sm-7" id="sgst" style="height:25px;" >
+                </div>
+            </div>
+                <div class="form-group row mb-3">
+                    <label for="nettotalamt" class="col-sm-5">Net TotalAmt</label>
+                    <input type="text" class="form-control col-sm-7" id="nettotalamt" style="height:25px;">
+                </div>
+            </div>
+
+            <div class="call-out">
+                <button class="btn btn-primary">Add Invoice Details</button>
+                <button class="btn btn-primary">Add Charge</button>
+            </div>
         
-
+        </form>
     </div>
 
+        <div class="col-4">
+            <form>
+                <div class="form-header">CONSIGNEE DETAILS</div>
+                
+                <div class="form-group row mb-3">
+                    <label for="searchconsignee" class="col-sm-5">SEARCH</label>
+                    <select class="form-control col-sm-7" id="searchconsignee" style="height: 25px;">
+                        <option value="abc">ABC</option>
+                        <option value="def">DEF</option>
+                    </select>
+                </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <div class="form-group row mb-3">
+                    <label for="consigneename" class="col-sm-5">Consignee Name</label>
+                    <input type="text" class="form-control col-sm-7" id="consigneename" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="city" class="col-sm-5">City<span class="star">*</span></label>
+                    <input type="text" class="form-control col-sm-7" id="city" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="address" class="col-sm-5">Address</label>
+                    <input type="text" class="form-control col-sm-7" id="address" style="height:25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="mobileno" class="col-sm-5">Mobile No</label>
+                    <input type="tel" class="form-control col-sm-7" id="mobileno" style="height: 25px;">
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="pincode" class="col-sm-5">Pincode</label>
+                    <input type="number" class="form-control col-sm-7" id="pincode" style="height:25px;">
+                </div>
+
+                <div class="form-group  row mb-3">
+                    <label for="state" class="col-sm-5">State</label>
+                    <input type="text" class="form-control col-sm-7" id="state" required style="height:25px;">
+                </div>
+                
+                
+                <div class="form-group row mb-3">
+                    <label for="companyname" class="col-sm-5">Company Name</label>
+                    <select class="form-control col-sm-7" id="companyname" style="height: 25px;">
+                        <option value="multimodelcargoservice">MULTI MODEL CARGO SERVICE</option>
+                        <option value="multimodelshippingservice">MULTI MODEL SHIPPING SERVICE</option>
+                    </select>
+                </div>
+
+                <div class="row mt-5" >
+                    <div class="col-6">
+                <div class="form-group row mb-3">
+                    <label for="doctype" class="col-sm-5">DOC Type</label>
+                    <select class="form-control col-sm-7" id="doctype" style="height:25px;">
+                        <option value="nondoctype">NON DOC TYPE</option>
+                        <option value="doctype">DOC TYPE</option>
+                    </select>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="billingbranch" class="col-sm-5">Billing Branch<span class="star">*</span></label>
+                    <select class="form-control col-sm-7" id="billingbranch" style="height: 25px;">
+                        <option value="chennai">CHENNAI</option>
+                        <option value="bangalore">BANGALORE</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-6">
+                <div class="form-group row mb-3">
+                    <label for="deliverytype" class="col-sm-5">Delivery Type</label>
+                    <select class="form-control col-sm-7" id="deliverytype" style="height:25px;">
+                        <option value="doordelivery">DOOR DELIVERY</option>
+                        <option value="onlinedelivery">ONLINE DELIVERY</option>
+                    </select>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="freightchargeby" class="col-sm-5">Freight Charge By</label>
+                    <select class="form-control col-sm-7" id="freightchargeby" style="height:25px;">
+                        <option value="consignor">CONSIGNOR</option>
+                        <option value="Consignee">CONSIGNEE</option>
+                    </select>
+                </div>
+              </div>
+
+                <div class="form-group row mb-3">
+                    <label for="invoicecurrency" class="col-sm-5">Invoice_Currency</label>
+                    <select class="form-control col-sm-7" id="desc_of_goods" style="height:25px;">
+                        <option value="inr">INR</option>
+                        <option value="dollar">DOLLAR</option>
+                    </select>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="bookedby" class="col-sm-5">Booked By</label>
+                    <input type="text" class="form-control col-sm-7" id="bookedby" value="chennai@mmcs" style="height:25px;">
+                </div>
+            </div>
+
+
+            <div class="call-out">
+                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-primary">Update</button>
+                <button class="btn btn-primary">Delete</button>
+                <button class="btn btn-primary">Clear</button>
+                <button class="btn btn-primary">Print</button>
+            </div>
+        
+        </form>
+    </div>
+             
+        
+    </div>
+</div>
 </body>
 </html>
