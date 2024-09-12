@@ -1,0 +1,43 @@
+body{
+    background-color: white;
+}
+.container{
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+   
+    
+}
+.form-header {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-section {
+    margin-bottom: 12px;
+}
+
+.star {
+    color: red !important;
+}
+
+input.form-control {
+    border: 1px solid lightblue;
+}
+
+
+
+.billing-header {
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    text-align: left;
+}
+
+#bookedby {
+    color: green;
+    font-weight: bold;
+}
