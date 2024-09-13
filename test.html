@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="task2.css">
     <title>Cargo Service Form</title>
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
+
     <div class="row">
        
         <div class="col-4">
-            <form>
+            <form class="" >
                 <div class="form-group row mb-3">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input ml-3" type="radio" name="cdType" id="manual_cd" value="manual">
@@ -46,7 +47,7 @@
 
                 <div class="form-group row mb-3">
                     <label for="serviceType" class="col-sm-5">Service Type <span class="star">*</span></label>
-                    <select class="form-control col-sm-7" id="serviceType" style="height:25px;">
+                    <select class="form-control col-sm-7 " id="serviceType" style="height:25px;">
                         <option value="">Select</option>
                         <option value="standard">Standard</option>
                         <option value="express">Express</option>
@@ -97,29 +98,32 @@
                     <input type="text" class="form-control col-sm-7" id="volmetric_wgt" style="height:25px;">
                 </div>
               </div>
-                <div class="form-group row mb-3">
-                    <label for="desc_of_goods" class="col-sm-5">Desc of Goods</label>
-                    <input type="text" class="form-control col-sm-7" id="desc_of_goods" style="height:25px;">
-                </div>
+               
 
-                <div class="form-group row mb-3">
+                <div class="form-group mb-3  col-12 d-flex align-items-center justify-content-end">
                     <label for="forwardto" class="col-sm-5">Forward To</label>
                     <input type="number" class="form-control col-sm-7" id="forwardto" style="height:25px;">
                 </div>
+
+                    <div class="form-group mb-3  col-12 d-flex align-items-center justify-content-end">
+                        <label for="desc_of_goods" class="col-sm-5 col-4">Desc of Goods</label>
+                        <input type="text" class="form-control col-sm-7 col-10" id="desc_of_goods" style="height:25px;">
+                    </div>
 
                
                 </div>
             </form>
         </div>
         
-        <div class="col-4">
-            <form>
+        <div class="col-4 ">
+            <form class="col-12">
                 <div class="form-group row mb-3">
                     <label for="edd" class="col-sm-5">EDD</label>
                     <input type="date" class="form-control col-sm-7" id="edd">
+                    <div class="form-header col-12 my-3">CONSIGNOR DETAILS</div>
+
                 </div>
 
-                <div class="form-header">CONSIGNOR DETAILS</div>
 
                 <div class="form-group row mb-3">
                     <label for="searchconsignor" class="col-sm-5">SEARCH</label>
@@ -159,7 +163,7 @@
                     <input type="text" class="form-control col-sm-7" id="state" required style="height:25px;">
                 </div>
 
-                <div class="form-header bg-white text-danger">Billing Details</div>
+                <div class="form-header-1">Billing Details</div>
                 
                 <div class="row mt-5" >
                     <div class="col-6">
@@ -172,7 +176,7 @@
                 </div>
 
                 <div class="form-group row mb-3">
-                    <label for="ratePerKg" class="col-sm-5">RatePer_kg</label>
+                    <label for="ratePerKg" class="col-sm-5">RatePer <br> _kg</label>
                     <input type="text" class="form-control col-sm-7" id="ratePerKg" style="height: 25px;">
                 </div>
 
@@ -194,17 +198,17 @@
 
                 <div class="col-6">
                 <div class="form-group row mb-3">
-                    <label for="chargablewt" class="col-sm-5">ChargableWt(kg)</label>
+                    <label for="chargablewt" class="col-sm-5">Chargable <br> Wt(kg)</label>
                     <input type="text" class="form-control col-sm-7" id="chargablewt" style="height:25px;" >
                 </div>
 
                 <div class="form-group row mb-3">
-                    <label for="freightamt" class="col-sm-5">FreightAmt</label>
+                    <label for="freightamt" class="col-sm-5">Freight <br> Amt</label>
                     <input type="text" class="form-control col-sm-7" id="freightamt" style="height:25px;">
                 </div>
 
                 <div class="form=group row mb-3">
-                    <label for="othercharge">Other Charge</label>
+                    <label for="othercharge" class="col-sm-5">Other Charge</label>
                     <input type="text" class="form-control col-sm-7" id="othercharge" style="height: 25px;">
                 </div>
 
@@ -218,7 +222,7 @@
                     <input type="text" class="form-control col-sm-7" id="sgst" style="height:25px;" >
                 </div>
             </div>
-                <div class="form-group row mb-3">
+                <div class="form-group col-12 d-flex mb-3">
                     <label for="nettotalamt" class="col-sm-5">Net TotalAmt</label>
                     <input type="text" class="form-control col-sm-7" id="nettotalamt" style="height:25px;">
                 </div>
@@ -232,11 +236,16 @@
         </form>
     </div>
 
-        <div class="col-4">
+        <div class="col-4 " >
+
+            <div class="form-header col-12 my-4">CONSIGNEE DETAILS</div>
+
+
             <form>
-                <div class="form-header">CONSIGNEE DETAILS</div>
+
                 
                 <div class="form-group row mb-3">
+
                     <label for="searchconsignee" class="col-sm-5">SEARCH</label>
                     <select class="form-control col-sm-7" id="searchconsignee" style="height: 25px;">
                         <option value="abc">ABC</option>
@@ -319,18 +328,22 @@
                 </div>
               </div>
 
-                <div class="form-group row mb-3">
-                    <label for="invoicecurrency" class="col-sm-5">Invoice_Currency</label>
-                    <select class="form-control col-sm-7" id="desc_of_goods" style="height:25px;">
-                        <option value="inr">INR</option>
-                        <option value="dollar">DOLLAR</option>
-                    </select>
-                </div>
+               
 
-                <div class="form-group row mb-3">
-                    <label for="bookedby" class="col-sm-5">Booked By</label>
-                    <input type="text" class="form-control col-sm-7" id="bookedby" value="chennai@mmcs" style="height:25px;">
-                </div>
+                
+            </div>
+
+            <div class="form-group row mb-3">
+                <label for="invoicecurrency" class="col-sm-5">Invoice_Currency</label>
+                <select class="form-control col-sm-7" id="desc_of_goods" style="height:25px;">
+                    <option value="inr">INR</option>
+                    <option value="dollar">DOLLAR</option>
+                </select>
+            </div>
+
+            <div class="form-group row mb-3">
+                <label for="bookedby" class="col-sm-5">Booked By</label>
+                <input type="text" class="form-control col-sm-7" id="bookedby" value="chennai@mmcs" style="height: 25px;">
             </div>
 
 
