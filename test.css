@@ -1,95 +1,82 @@
-body {
+body{
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
     padding: 20px;
 }
-
-.container {
+.container{
     max-width: 1200px;
     margin: 0 auto;
 }
-
-.form-header {
-    background-color: blue;
+.header {
+    background-color: #3366cc;
     color: white;
-    padding: 15px;
+    font-weight: bold;
     text-align: center;
-    font-weight: bold;
-    font-size: 14px;
+    padding: 10px;
 }
-
-.form-group {
-    margin-bottom: 12px;
-}
-
-label {
-    font-size: 13px;
-    font-weight: bold;
-}
-
-input[type="text"], 
-input[type="number"], 
-input[type="date"], 
-select, 
-textarea {
-    border: 1px solid lightblue;
-    border-radius: 4px;
-    width: 100%;
-    padding: 5px;
-    font-size: 12px;
-}
-
-input[type="radio"] {
-    margin-right: 5px;
-}
-
 .star {
     color: red;
 }
 
-#bookedby {
+#bookedby{
     color: green;
     font-weight: bold;
 }
-
-.form-header-1 {
+.billing-details .header {
+    background-color: white;
     color: red;
     font-weight: bold;
-    background-color: white;
-    border: none;
     text-align: left;
-    margin-left: 6px;
-    padding-left: 6px;
+    padding: 10px;
 }
-
-.row {
+.billing-details .columns {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.billing-details .column {
+    flex: 1;
+    padding: 10px;
+}
+.buttons {
+    text-align: left;
+    margin-top: 20px;
+}
+.btn-primary {
+    background-color: #3366cc;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #254e9e;
 }
 
-.col-md-4 {
-    width: 33.3333%;
-    padding: 0 10px;
-}
-
-@media (max-width: 768px) {
-    .col-md-4 {
-        width: 100%;
-    }
-}
-
-form {
-    margin-bottom: 20px;
-}
-
-.call-out {
+.call-out{
     display: flex;
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
 }
 
-button {
+form{
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-4{
+    width: 33.3333%;
+    padding: 0 10px;
+}
+
+@media(max-width:768px){
+    .col-md-4{
+        width: 100%;
+    }
+}
+
+button{
     background-color: blue;
     color: white;
     border: none;
@@ -99,34 +86,33 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: darkblue;
+label{
+    font-size: 13px;
+    font-weight: bold;
 }
 
-select.form-control, 
-input.form-control {
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea{
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+input[type="radio"]{
+    margin-right: 5px;
+}
+
+select.form-control,
+input.form-control{
     padding: 5px;
     font-size: 13px;
 }
 
-.table-header {
-    background-color: #f5f5f5;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.table-row {
-    padding: 8px;
-    border-bottom: 1px solid lightgray;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table td {
-    padding: 8px;
-    border: 1px solid lightgray;
+.form-group{
+    margin-bottom: 12px;
 }
